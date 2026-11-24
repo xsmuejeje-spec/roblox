@@ -32,11 +32,15 @@ function mostrarTodos(data) {
 
         const cCompleted = document.createElement("td");
 
+        const etiqueta = document.createElement("span");
         if (todo.completed) {
-            cCompleted.textContent = "Completado";
+            etiqueta.textContent = "Completado";
+            etiqueta.className = "estado estado-completado";
         } else {
-            cCompleted.textContent = "Pendiente";
+            etiqueta.textContent = "Pendiente";
+            etiqueta.className = "estado estado-pendiente";
         }
+        cCompleted.appendChild(etiqueta);
 
         fila.appendChild(cCompleted);
         tbody.appendChild(fila);

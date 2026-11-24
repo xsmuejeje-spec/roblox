@@ -48,7 +48,7 @@ function mostrarFotos(data) {
         img.src = foto.url;
         img.alt = foto.title;
         img.width = 120;
-        img.className = "rounded";
+        img.className = "foto";
         // Si la imagen original (via.placeholder.com) no carga, se usa un servicio equivalente
         img.onerror = function () {
             this.onerror = null;
